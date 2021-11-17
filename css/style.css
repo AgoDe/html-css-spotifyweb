@@ -9,7 +9,7 @@
 }
 
 .h-1 {
-    height: 100vh;
+    height: 400px;
 }
 .h-100 {
     height: 100%;
@@ -27,6 +27,9 @@
 .fl-left {
     float: left;
 }
+.fl-right {
+    float: right;
+}
 .clearfix {
     content: "";
     display: table;
@@ -35,6 +38,9 @@
 
     /* fine classi layout */
 
+.b-rad {
+    border-radius: 50%;
+}
 /* fine classi utility */
 
 .big-container {
@@ -43,23 +49,21 @@
 }
 
 .container {
- background-color: black;
  height: calc(100% - 100px);
  width: 100%;
+ top: 0;
 }
 
 aside {
-    background-color: darkcyan;
+    background-color: black;
     width: 200px;
+    left: 0;
 }
 
 main {
     background-color: blue;
     width: calc(100% - 200px);
 }
-
-
-
 
 footer {
     background-color: green;
@@ -72,12 +76,14 @@ footer {
 /* header */
 
 header {
-    background-color: rgb(8, 11, 18);
+    background-color: rgb(11, 14, 25);
     height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    
+    
 }
 
 .upgrade {
@@ -89,6 +95,75 @@ header {
     margin: 5px;
 }
 /* / header */
+/* ------------------- */
+/* article */
+
+article {
+    background-color: rgb(28, 31, 38);
+    overflow: auto;
+    height: calc(100% - 100px);
+    margin-bottom: 100px;
+}
+
+/* nav */
+article  nav {
+    text-align: center;
+    padding: 10px;  
+}
+
+article nav ul {
+    list-style: none; 
+}
+
+article nav ul li {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bolder;
+    color: grey;
+    padding: 0 7px;
+}
+/* / nav */
+
+/* container playlist */
+
+.playlist-container {
+    overflow: scroll;
+    padding: 10px;
+
+}
+.playlist-container h3 {
+    
+}
+.playlist-container h4 {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.playlist-container p {
+    color: grey;
+    font-size: 9px;
+    margin: 4px 0;
+}
+
+.playlist-row {
+    display: flex;
+    margin: 15px 0;
+}
+.album-box {
+    height: 220px;
+    width: 150px;
+    text-align: center;
+    margin-right: 10px;
+}
+.album-box img {
+    width: 100%;
+}
+/* / container playlist */
+
+/* fine article */
+
+
+/* ------------------------- */
+/* mobile */
 
 @media screen and (max-width: 575px) {
 
