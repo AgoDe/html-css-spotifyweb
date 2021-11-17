@@ -1,0 +1,103 @@
+/* inizio classi utility */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Roboto', sans-serif;
+    font-family: 'Shippori Antique B1', sans-serif;
+    color: white;
+}
+
+.h-1 {
+    height: 100vh;
+}
+.h-100 {
+    height: 100%;
+}
+.h-3 {
+    height: 200px;
+}
+
+    /* inizio classi layout */
+
+.flex {
+    display: flex;
+}
+
+.fl-left {
+    float: left;
+}
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+    /* fine classi layout */
+
+/* fine classi utility */
+
+.big-container {
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+ background-color: black;
+ height: calc(100% - 100px);
+ width: 100%;
+}
+
+aside {
+    background-color: darkcyan;
+    width: 200px;
+}
+
+main {
+    background-color: blue;
+    width: calc(100% - 200px);
+}
+
+
+
+
+footer {
+    background-color: green;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* header */
+
+header {
+    background-color: rgb(8, 11, 18);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.upgrade {
+    font-size: 12px;
+    border: white 2px solid;
+    border-radius: 20px;
+    padding: 10px 50px;
+    z-index: 1001;
+    margin: 5px;
+}
+/* / header */
+
+@media screen and (max-width: 575px) {
+
+    main {
+        width: calc(100% - 50px);
+    }
+    aside {
+        width: 50px;
+    }
+    
+}
+
