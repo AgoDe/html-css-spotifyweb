@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family:  'Roboto', sans-serif;
     font-family: 'Shippori Antique B1', sans-serif;
-    color: white;
+   
 }
 
 .h-1 {
@@ -49,41 +49,147 @@
 }
 
 .container {
- height: calc(100% - 100px);
+ height:calc(100vh - 100px);
  width: 100%;
  top: 0;
 }
 
+/* aside */
 aside {
     background-color: black;
     width: 200px;
-    left: 0;
+    height: 100%;
+    padding: 10px 15px;
+    color: grey;
 }
+
+aside > .flex {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-container {
+    height: calc(100% - 90px);
+    width: 100%;
+    flex-grow: 1;
+}
+.sidebar-container .flex {
+    flex-direction: column;
+}
+
+.logo img {
+    width: 120px;
+
+}
+.explore {
+    margin-top: 15px;
+}
+.explore div {
+    height: 40px;
+    line-height: 40px;
+
+
+}
+
+.explore svg {
+    height: 30px;
+    width: 30px;
+    fill: grey;
+    vertical-align: middle;
+}
+
+.playlist {
+    margin-top: 15px;
+    overflow-y:auto ;
+}
+
+.playlist h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.new-playlist span {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: grey;
+    color: black;
+    margin-right: 5px;
+}
+.playlist div {
+    margin: 10px 0;
+}
+
+.user-box {
+    height: 90px;
+}    
+
+.user-box .app {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: grey 2px solid;
+}
+.user-box .app svg {
+    width: 20px;
+    height: 20x;
+    fill: grey;
+    vertical-align: middle;
+    
+    
+}
+.user-box .app span {
+    font-size: 13px;
+}
+
+.user-box .user-profile {
+    height: 50px;
+    line-height: 50px;
+}
+.user-box .user-profile img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: grey;
+    vertical-align: middle;
+}
+.user-box .user-profile span {
+    color: white
+}
+
+/* / aside */
+
+
+
+
 
 main {
-    background-color: blue;
+    background-color: rgb(28, 31, 38);
     width: calc(100% - 200px);
+    height: 100%;
+    padding-top: 100px;
+    color: white;
 }
-
-footer {
-    background-color: green;
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-
 /* header */
 
 header {
-    background-color: rgb(11, 14, 25);
+    background-color:rgba(0, 0, 0, 0.4);
     height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 200px);
+    z-index: 1001;
+   
+}
+
+header > .flex {
+    height: 100%;
+    justify-content: flex-end;
     align-items: center;
-    
-    
 }
 
 .upgrade {
@@ -91,7 +197,6 @@ header {
     border: white 2px solid;
     border-radius: 20px;
     padding: 10px 50px;
-    z-index: 1001;
     margin: 5px;
 }
 /* / header */
@@ -99,10 +204,8 @@ header {
 /* article */
 
 article {
-    background-color: rgb(28, 31, 38);
-    overflow: auto;
-    height: calc(100% - 100px);
-    margin-bottom: 100px;
+   
+    height: 100%;
 }
 
 /* nav */
@@ -129,6 +232,7 @@ article nav ul li {
 .playlist-container {
     overflow: scroll;
     padding: 10px;
+    max-height: 100%;
 
 }
 .playlist-container h3 {
@@ -147,12 +251,14 @@ article nav ul li {
 .playlist-row {
     display: flex;
     margin: 15px 0;
+    overflow-x: auto;
 }
 .album-box {
     height: 220px;
     width: 150px;
     text-align: center;
     margin-right: 10px;
+    flex-shrink: 0;
 }
 .album-box img {
     width: 100%;
@@ -161,12 +267,27 @@ article nav ul li {
 
 /* fine article */
 
+/* footer */
+
+footer {
+    background-color: green;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* / footer */
+
 
 /* ------------------------- */
 /* mobile */
 
 @media screen and (max-width: 575px) {
 
+    body {
+        height: 100vh;
+    }
     main {
         width: calc(100% - 50px);
     }
