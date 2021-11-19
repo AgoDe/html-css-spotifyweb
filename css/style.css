@@ -223,6 +223,7 @@ header > .flex {
     padding: 20 100px;
     border-radius: 40px;
     margin: 5px;
+    cursor: pointer;
 }
 /* / header */
 
@@ -323,6 +324,21 @@ article nav ul li:hover::before{
     height: 150px;
     background: rgba(0, 0, 0, 0.4);
     position: absolute;
+    cursor: pointer;
+
+}
+.album-box:hover .img-box-rad::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f144";
+    color:white;
+    font-size: 45px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    cursor: pointer;
 }
 
 /* / container playlist */
@@ -548,7 +564,6 @@ footer > .flex {
     }
     aside {
         width: 50px;
-        padding: 10px 5px;
         text-align: center;
     }
     
@@ -557,6 +572,9 @@ footer > .flex {
     }
     .logo-big {
         display: none;
+    }
+    .logo-box div {
+        padding: 0;
     }
     .explore > div > span {
         display: none;
